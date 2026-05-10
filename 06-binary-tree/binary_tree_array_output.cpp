@@ -25,14 +25,19 @@ public:
     }
     void release(Binode *bt);
     Binode* creat(Binode *bt);
+
+
     int treelength(Binode *bt);
     Binode* getroot();
     int numbernode(Binode *bt);
 };
+
+
 Binode* Btree::getroot()
 {
     return root;
 }
+
 
 void Btree::release(Binode *bt)
 {
@@ -64,22 +69,17 @@ Binode* Btree::creat(Binode *bt)
 }
 
 
-
 int Btree::treelength(Binode *bt)
 {
     if (bt == NULL) return 0;
-
-
     if (!bt->lchild&&!bt->rchild)
     {
         return 1;
     }
-
     if (!bt->lchild&&bt->rchild)
     {
         return treelength(bt->rchild)+1;
     }
-
     if (bt->lchild&&!bt->rchild)
     {
         return treelength(bt->lchild)+1;
@@ -105,7 +105,6 @@ int main()
     Btree tree;
     cout<<tree.numbernode(tree.getroot())<<endl;
     return 0;
-
 
 
 }

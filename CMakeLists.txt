@@ -17,4 +17,12 @@ file(GLOB_RECURSE ALL_SOURCES
 )
 
 # 生成可执行文件
-add_executable(data_structure ${ALL_SOURCES})
+add_executable(data_structure ${ALL_SOURCES}
+        02-stack/duistack.cpp
+        02-stack/linkstack.cpp
+        03-queue/xunhuanqueue.cpp
+        03-queue/lianshiqueue.cpp
+        02-stack/kuohaopipei.cpp
+        02-stack/houzhuiqiuzhi.cpp
+        02-stack/qianzhuiqiuzhi.cpp
+        03-queue/yuesefuhuan.cpp)
